@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block title %}Movie Detail
+{% endblock %}
+
+{% block content %}
+    <div class="row">
+        <img src="{{movie.poster.url}}" width="100%">
+    </div>
+    <div class="row">
+        <div class="col">
+            <h1 class="display-6">{{movie.title}}</h1>
+            <p><span class="badge badge-secondary">평점</span>{{movie.rating}}</p>
+
+
+            <h5><span class="badge badge-secondary">Description</span>{{movie.synopsis|linebreaks}}</h5>
+        </div>
+    </div>
+{% endblock %}
